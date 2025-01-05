@@ -10,7 +10,7 @@ redirect_from:
 ## Ph.D in Computer Science 
 **University of Southern California**, Los Angeles, CA  
 - 08/2024 – Present  
-- Advisor: [Professor Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/index.html)  
+- Advisor: [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/index.html)  
 - Research Focus: Anomaly Detection, Out-of-Distribution Detection, Large Language Models (LLMs)
 
 ## M.S in Machine Learning and Data Science 
