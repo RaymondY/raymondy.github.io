@@ -1,13 +1,12 @@
 ---
 permalink: /
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-About Me
-======
 Hello! I’m Tiankai Yang, a first-year PhD student of Computer Science at the University of Southern California (USC), supervised by Prof. [Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/index.html). Prior, I earned a Master’s degree in Machine Learning and Data Science from USC and a Bachelor’s degree in Software Engineering from Nankai University, China. 
 
 My research focuses on anomaly detection, out-of-distribution detection, and enhancing the robustness and trustworthiness of machine learning models, particularly in the realm of large language models (LLMs).
