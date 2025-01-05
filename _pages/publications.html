@@ -6,13 +6,151 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>. <br><sup>†</sup>Equal contribution; <sup>♠</sup>Corresponding author.</div>
+{% endif %}
+
+<div class="papers-section">
+  <!-- Preprints & Working Papers -->
+  {% if site.data.papers.preprints.size > 0 %}
+  <h2>Preprints & Working Papers</h2>
+  <hr />
+  <ul>
+    {% for paper in site.data.papers.preprints %}
+    <li>
+      <strong><a href="{{ paper.link }}">{{ paper.title }}</a></strong><br>
+      <!-- Authors with contributions -->
+      <span style="white-space: normal;">
+        {% for author in paper.authors %}
+          {% capture full_name %}
+            {% if author.name == "Tiankai Yang" %}
+              <u>{{ author.name | replace: " ", "&nbsp;" }}{% if author.equal_contribution %}<sup>†</sup>{% endif %}{% if author.corresponding_author %}<sup>♠</sup>{% endif %}</u>{% if forloop.last == false %}, {% else %}.{% endif %}
+            {% else %}
+              {{ author.name | replace: " ", "&nbsp;" }}{% if author.equal_contribution %}<sup>†</sup>{% endif %}{% if author.corresponding_author %}<sup>♠</sup>{% endif %}{% if forloop.last == false %}, {% else %}.{% endif %}
+            {% endif %}
+          {% endcapture %}
+          {{ full_name }}
+        {% endfor %}
+      </span>
+      <!-- {% for author in paper.authors %}
+        {% if author.name == "Tiankai" %}
+          <u>{{ author.name }}{% if author.equal_contribution %}<sup>†</sup>{% endif %}{% if author.corresponding_author %}<sup>♠</sup>{% endif %}</u>{% if forloop.last == false %}, {% else %}.{% endif %}
+        {% else %}
+          {{ author.name }}{% if author.equal_contribution %}<sup>†</sup>{% endif %}{% if author.corresponding_author %}<sup>♠</sup>{% endif %}{% if forloop.last == false %}, {% else %}.{% endif %}
+        {% endif %}
+      {% endfor %} -->
+      <br>
+      <em>Preprint</em>, {{ paper.date }}. 
+      <!-- {% if paper.code %}
+        <a href="{{ paper.code }}" class="paper-link">[Code]</a>
+      {% endif %}
+      {% if paper.bib %}
+        <a href="{{ paper.bib }}" class="paper-link">[Bib]</a>
+      {% endif %} -->
+      {% if paper.code %}
+        <a href="{{ paper.code }}" class="paper-icon" aria-label="Code"><i class="fab fa-github"></i></a>
+      {% endif %}
+      {% if paper.bib %}
+        <a href="{{ paper.bib }}" class="paper-icon" aria-label="BibTeX"><i class="fas fa-clipboard"></i></a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <!-- Conference Papers -->
+  {% if site.data.papers.conference.size > 0 %}
+  <h2>Conference Papers</h2>
+  <hr />
+  <ul>
+    {% for paper in site.data.papers.conference %}
+    <li>
+      <strong><a href="{{ paper.link }}">{{ paper.title }}</a></strong>
+      {% if paper.features %}
+        <span class="paper-feature">({{ paper.features }})</span>
+      {% endif %}
+      <br>
+      <!-- Authors with contributions -->
+      <span style="white-space: normal;">
+        {% for author in paper.authors %}
+          {% capture full_name %}
+            {% if author.name == "Tiankai Yang" %}
+              <u>{{ author.name | replace: " ", "&nbsp;" }}{% if author.equal_contribution %}<sup>†</sup>{% endif %}{% if author.corresponding_author %}<sup>♠</sup>{% endif %}</u>{% if forloop.last == false %}, {% else %}.{% endif %}
+            {% else %}
+              {{ author.name | replace: " ", "&nbsp;" }}{% if author.equal_contribution %}<sup>†</sup>{% endif %}{% if author.corresponding_author %}<sup>♠</sup>{% endif %}{% if forloop.last == false %}, {% else %}.{% endif %}
+            {% endif %}
+          {% endcapture %}
+          {{ full_name }}
+        {% endfor %}
+      </span>
+      <br>
+      <em>{{ paper.venue }}</em>, {{ paper.date }}. 
+      {% if paper.code %}
+        <a href="{{ paper.code }}" class="paper-icon" aria-label="Code"><i class="fab fa-github"></i></a>
+      {% endif %}
+      {% if paper.bib %}
+        <a href="{{ paper.bib }}" class="paper-icon" aria-label="BibTeX"><i class="fas fa-clipboard"></i></a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <!-- Journal Papers -->
+  {% if site.data.papers.journal.size > 0 %}
+  <h2>Journal Papers</h2>
+  <hr />
+  <ul>
+    {% for paper in site.data.papers.journal %}
+    <li>
+      <strong><a href="{{ paper.link }}">{{ paper.title }}</a></strong><br>
+      <!-- Authors with contributions -->
+      <span style="white-space: normal;">
+        {% for author in paper.authors %}
+          {% capture full_name %}
+            {% if author.name == "Tiankai Yang" %}
+              <u>{{ author.name | replace: " ", "&nbsp;" }}{% if author.equal_contribution %}<sup>†</sup>{% endif %}{% if author.corresponding_author %}<sup>♠</sup>{% endif %}</u>{% if forloop.last == false %}, {% else %}.{% endif %}
+            {% else %}
+              {{ author.name | replace: " ", "&nbsp;" }}{% if author.equal_contribution %}<sup>†</sup>{% endif %}{% if author.corresponding_author %}<sup>♠</sup>{% endif %}{% if forloop.last == false %}, {% else %}.{% endif %}
+            {% endif %}
+          {% endcapture %}
+          {{ full_name }}
+        {% endfor %}
+      </span>
+      <br>
+      <em>{{ paper.journal }}</em>, {{ paper.date }}. 
+      {% if paper.code %}
+        <a href="{{ paper.code }}" class="paper-icon" aria-label="Code"><i class="fab fa-github"></i></a>
+      {% endif %}
+      {% if paper.bib %}
+        <a href="{{ paper.bib }}" class="paper-icon" aria-label="BibTeX"><i class="fas fa-clipboard"></i></a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+
+<!-- Contribution Notes -->
+<!-- <div class="contribution-notes">
+  <p><sup>†</sup>Equal contribution; <sup>♠</sup>Corresponding author</p>
+</div> -->
+
+
+<!-- ---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+{% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-{% include base_path %}
+{% include base_path %} -->
 
 <!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
+<!-- {% if site.publication_category %}
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}
@@ -30,7 +168,8 @@ author_profile: true
   {% for post in site.publications reversed %}
     {% include archive-single.html %}
   {% endfor %}
-{% endif %}
+{% endif %} -->
+
 
 
 
