@@ -13,8 +13,9 @@ My research focuses on anomaly detection, out-of-distribution detection, and enh
 
 News
 ======
+- **\[02/2025\]** We have a new paper, DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection, accepted to CVPR 2025; [Preprint](https://arxiv.org/abs/2411.08227)!
 - **\[01/2025\]** We have a new paper, PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection, accepted to The Web Conference 2025 Demo Track; see our [Preprint](https://arxiv.org/abs/2412.12154).
 - **\[12/2024\]** We have a new paper evaluating how LLMs can help with anomaly detection (AD-LLM); see our [Preprint](https://arxiv.org/abs/2412.11142)!  
 <!-- - **\[12/2024\]** We have a new paper on a major upgrade to our library for outlier detection with LLM-based model selection (PyOD 2); see our [Preprint](https://arxiv.org/abs/2412.12154).   -->
 - **\[12/2024\]** We have a new paper introducing a comprehensive benchmark for NLP anomaly detection (NLP-ADBench); see our [Preprint](https://arxiv.org/abs/2412.04784)!  
-- **\[11/2024\]** We have a new paper on dynamic prototype updating for multimodal out-of-distribution detection (DPU); see our [Preprint](https://arxiv.org/abs/2411.08227)!
+<!-- - **\[11/2024\]** We have a new paper on dynamic prototype updating for multimodal out-of-distribution detection (DPU); see our [Preprint](https://arxiv.org/abs/2411.08227)! -->
