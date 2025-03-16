@@ -8,6 +8,7 @@ redirect_from:
 ---
 
 ## Program Committee (PC) for Conferences and Workshops
+- [ACL ARR 2025](https://2025.aclweb.org/)
 - [ICML 2025](https://icml.cc/Conferences/2025)
 - ICLR Workshop on [Foundation Models in the Wild](https://fm-wild-community.github.io/), 2025
 - ACL Workshop on [Advances in Language and Vision Research](https://alvr-workshop.github.io/), 2024
