@@ -13,6 +13,8 @@ My research focuses on anomaly detection, out-of-distribution detection, and enh
 
 News
 ======
+- **\[04/2025\]** We have a new paper on model selection via LLMs for time series forecasting; see our [Preprint](https://arxiv.org/abs/2504.02119).
+- **\[04/2025\]** We have a new paper on adversarial prompt optimization to manipulate LLM ranking systems (StealthRank); see our [Preprint](https://arxiv.org/abs/2504.05804).
 - **\[03/2025\]** We have a new paper exploring a causal approach to mitigating hallucinations in Vision-Language Models (VLMs); see our [Preprint](https://arxiv.org/abs/2503.06169).
 - **\[02/2025\]** We have a new paper, DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection, accepted to CVPR 2025; see our [Preprint](https://arxiv.org/abs/2411.08227)!
 - **\[01/2025\]** We have a new paper, PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection, accepted to The Web Conference 2025 Demo Track; see our [Preprint](https://arxiv.org/abs/2412.12154).
