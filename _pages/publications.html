@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>. <br><sup>†</sup>Equal contribution; <sup>♠</sup>Corresponding author.</div>
+  <div class="wordwrap">Here is a partial excerpt; you can find more articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>. <br><sup>†</sup>Equal contribution; <sup>♠</sup>Corresponding author.</div>
 {% endif %}
 
 <div class="papers-section">
@@ -65,9 +65,9 @@ author_profile: true
     {% for paper in site.data.papers.conference %}
     <li>
       <strong><a href="{{ paper.link }}">{{ paper.title }}</a></strong>
-      {% if paper.features %}
+      <!-- {% if paper.features %}
         <span class="paper-feature">({{ paper.features }})</span>
-      {% endif %}
+      {% endif %} -->
       <br>
       <!-- Authors with contributions -->
       <span style="white-space: normal;">
@@ -83,7 +83,10 @@ author_profile: true
         {% endfor %}
       </span>
       <br>
-      <em>{{ paper.venue }}</em>, {{ paper.date }}. 
+      <em>{{ paper.venue }}</em>, {{ paper.date }}.
+      {% if paper.features %}
+        <span class="paper-feature"> {{ paper.features }}.</span>
+      {% endif %}
       {% if paper.code %}
         <a href="{{ paper.code }}" class="paper-icon" aria-label="Code"><i class="fab fa-github"></i></a>
       {% endif %}

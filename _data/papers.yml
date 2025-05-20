@@ -8,8 +8,40 @@ preprints:
   #   link: ""
   #   code: ""
   #   bib: ""
-  - id: 3
-    title: "AD-LLM: Benchmarking Large Language Models for Anomaly Detection"
+  - id: 0
+    title: "AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Detection"
+    authors: 
+      - name: "Tiankai Yang"
+        equal_contribution: true
+      - name: "Junjun Liu"
+        equal_contribution: true
+      - name: "Wingchun Siu"
+        equal_contribution: true
+      - name: "Jiahang Wang"
+      - name: "Zhuangzhuang Qian"
+      - name: "Chanjuan Song"
+      - name: "Cheng Cheng"
+      - name: "Xiyang Hu"
+      - name: "Yue Zhao"
+    date: "2025"
+    link: "https://arxiv.org/abs/2505.12594"
+    code: "https://github.com/USC-FORTIS/AD-AGENT"
+    # bib: "https://scholar.googleusercontent.com/scholar.bib?q=info:n__vaWhjgR8J:scholar.google.com/&output=citation&scisdr=ClH5Oh3aELDpyc5Bakc:AFWwaeYAAAAAZ3hHckdzR9MZc3Ut2kT5xLyvnIM&scisig=AFWwaeYAAAAAZ3hHcskkXQhiUiRxQO7EiNv6h4Q&scisf=4&ct=citation&cd=0&hl=en"
+  
+conference:
+  # - id: 0
+  #   title: ""
+  #   authors:
+  #     - name: "Tiankai Yang"
+  #       equal_contribution: true
+  #   venue: ""
+  #   date: "2024"
+  #   features: ""
+  #   link: ""
+  #   code: ""
+  #   bib: ""
+  - id: 2
+    title: "AD-LLM: Benchmarking large language models for anomaly detection"
     authors:
       - name: "Tiankai Yang"
         equal_contribution: true
@@ -25,11 +57,26 @@ preprints:
       - name: "Kaize Ding"
       - name: "Xia Hu"
       - name: "Yue Zhao"
-    date: "2024"
-    link: "https://arxiv.org/abs/2412.11142"
+    venue: "ACL (Findings)"
+    date: "2025"
+    link: ""
     code: "https://github.com/USC-FORTIS/AD-LLM"
-    # bib: "https://scholar.googleusercontent.com/scholar.bib?q=info:-Fz9NeHnZnwJ:scholar.google.com/&output=citation&scisdr=ClH5Oh3aELDpycEX9FQ:AFWwaeYAAAAAZ3cR7FRBMpfSy9_OAP6YeM1SWEo&scisig=AFWwaeYAAAAAZ3cR7G7KVDvbFHkJezNnZY9qS-4&scisf=4&ct=citation&cd=0&hl=en"
-  - id: 2
+    # bib: ""
+  - id: 1
+    title: "DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection"
+    authors:
+      - name: "Shawn Li"
+      - name: "Huixian Gong"
+      - name: "Hao Dong"
+      - name: "Tiankai Yang"
+      - name: "Zhengzhong Tu"
+      - name: "Yue Zhao"
+    venue: "CVPR"
+    date: "2025"
+    features: "<i class='fas fa-award' style='font-size:18px;'></i> <b>Highlight Paper</b>"
+    link: "https://openreview.net/forum?id=WHDQGXLNo5"
+    code: "https://github.com/lili0415/DPU-OOD-Detection"
+  - id: 0
     title: "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection"
     authors: 
       - name: "Sihan Chen"
@@ -48,53 +95,11 @@ preprints:
       - name: "Yichi Zhang"
       - name: "Yushun Dong"
       - name: "Yue Zhao"
-    date: "2024"
+    venue: "The Web Conference (Demo Track)"
+    date: "2025"
     link: "https://arxiv.org/abs/2412.12154"
     code: "https://github.com/yzhao062/pyod"
-    # bib: "https://scholar.googleusercontent.com/scholar.bib?q=info:yoiwGUbt5nUJ:scholar.google.com/&output=citation&scisdr=ClH5Oh3aELDpyc5Ovik:AFWwaeYAAAAAZ3hIpik5jrkB1ENVqwZ4YIxLrp4&scisig=AFWwaeYAAAAAZ3hIpjICTYnUc6dZniOS1X01jZs&scisf=4&ct=citation&cd=0&hl=en"
-  - id: 1
-    title: "NLP-ADBench: NLP Anomaly Detection Benchmark"
-    authors: 
-      - name: "Yuangang Li"
-        equal_contribution: true
-      - name: "Jiaqi Li"
-        equal_contribution: true
-      - name: "Zhuo Xiao"
-        equal_contribution: true
-      - name: "Tiankai Yang"
-      - name: "Yi Nian"
-      - name: "Xiyang Hu"
-      - name: "Yue Zhao"
-    date: "2024"
-    link: "https://arxiv.org/abs/2412.04784"
-    code: "https://github.com/USC-FORTIS/NLP-ADBench"
-    # bib: "https://scholar.googleusercontent.com/scholar.bib?q=info:n__vaWhjgR8J:scholar.google.com/&output=citation&scisdr=ClH5Oh3aELDpyc5Bakc:AFWwaeYAAAAAZ3hHckdzR9MZc3Ut2kT5xLyvnIM&scisig=AFWwaeYAAAAAZ3hHcskkXQhiUiRxQO7EiNv6h4Q&scisf=4&ct=citation&cd=0&hl=en"
-  - id: 0
-    title: "DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection"
-    authors:
-      - name: "Shawn Li"
-      - name: "Huixian Gong"
-      - name: "Hao Dong"
-      - name: "Tiankai Yang"
-      - name: "Zhengzhong Tu"
-      - name: "Yue Zhao"
-    date: "2024"
-    link: "https://arxiv.org/abs/2411.08227"
-    code: "https://github.com/lili0415/DPU-OOD-Detection"
-    # bib: "https://scholar.googleusercontent.com/scholar.bib?q=info:y7WN5TvCr2sJ:scholar.google.com/&output=citation&scisdr=ClH5Oh3aELDpyc5A2xc:AFWwaeYAAAAAZ3hGwxdSsjbjr2Y3Dse2sXt26qI&scisig=AFWwaeYAAAAAZ3hGw5KFGgY8qTtl-N1cTTeA9do&scisf=4&ct=citation&cd=0&hl=en"
-
-conference:
-  # - id: 0
-  #   title: ""
-  #   authors:
-  #     - name: "Tiankai Yang"
-  #       equal_contribution: true
-  #   venue: ""
-  #   date: "2024"
-  #   features: ""
-  #   link: ""
-  #   code: ""
-  #   bib: ""
+    
 
 journal:
   # - id: 0
