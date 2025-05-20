@@ -13,6 +13,7 @@ My research focuses on anomaly detection, out-of-distribution detection, and enh
 
 News
 ======
+- **\[05/2025\]** We have a new paper building a multi-agent framework for end-to-end anomaly detection (AD-AGENT); see our [Preprint](https://arxiv.org/abs/2505.12594).
 - **\[05/2025\]** Our paper "AD-LLM: Benchmarking Large Language Models for Anomaly Detection" has been accepted to ACL 2025 Findings! See our [Preprint](https://arxiv.org/abs/2412.11142).
 - **\[04/2025\]** We have a new paper on model selection via LLMs for time series forecasting; see our [Preprint](https://arxiv.org/abs/2504.02119).
 - **\[04/2025\]** We have a new paper on adversarial prompt optimization to manipulate LLM ranking systems (StealthRank); see our [Preprint](https://arxiv.org/abs/2504.05804).
