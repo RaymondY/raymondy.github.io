@@ -18,8 +18,8 @@ News
 - **\[08/2025\]** We have two new papers accepted to EMNLP Findings 2025: one on causal methods for hallucination mitigation (Treble Counterfactual VLMs) and another introducing a benchmark for NLP anomaly detection (NLP-ADBench). See our [Treble Preprint](https://arxiv.org/abs/2503.06169) and [NLP-ADBench Preprint](https://arxiv.org/abs/2412.04784)!
 - **\[05/2025\]** We have a new paper on benchmarking personalized conversational reasoning for LLMs (PersonaConvBench). See our [Preprint](https://arxiv.org/abs/2505.14106)!
 - **\[05/2025\]** Our paper "AD-LLM: Benchmarking Large Language Models for Anomaly Detection" has been accepted to ACL 2025 Findings! See our [Preprint](https://arxiv.org/abs/2412.11142).
-<!-- - **\[04/2025\]** We have a new paper on model selection via LLMs for time series forecasting; see our [Preprint](https://arxiv.org/abs/2504.02119).
-- **\[04/2025\]** We have a new paper on adversarial prompt optimization to manipulate LLM ranking systems (StealthRank); see our [Preprint](https://arxiv.org/abs/2504.05804). -->
+<!-- - **\[04/2025\]** We have a new paper on model selection via LLMs for time series forecasting; see our [Preprint](https://arxiv.org/abs/2504.02119). -->
+<!-- - **\[04/2025\]** We have a new paper on adversarial prompt optimization to manipulate LLM ranking systems (StealthRank); see our [Preprint](https://arxiv.org/abs/2504.05804). -->
 <!-- - **\[03/2025\]** We have a new paper exploring a causal approach to mitigating hallucinations in Vision-Language Models (VLMs); see our [Preprint](https://arxiv.org/abs/2503.06169). -->
 <!-- - **\[02/2025\]** We have a new paper, DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection, accepted to CVPR 2025; see our [Preprint](https://arxiv.org/abs/2411.08227)! -->
 <!-- - **\[01/2025\]** We have a new paper, PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection, accepted to The Web Conference 2025 Demo Track; see our [Preprint](https://arxiv.org/abs/2412.12154). -->
