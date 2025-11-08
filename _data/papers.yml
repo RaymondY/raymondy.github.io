@@ -8,7 +8,20 @@ preprints:
   #   link: ""
   #   code: ""
   #   bib: ""
-  - id: 0
+  
+conference:
+  # - id: 0
+  #   title: ""
+  #   authors:
+  #     - name: "Tiankai Yang"
+  #       equal_contribution: true
+  #   venue: ""
+  #   date: "2024"
+  #   features: ""
+  #   link: ""
+  #   code: ""
+  #   bib: ""
+  - id: 3
     title: "AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Detection"
     authors: 
       - name: "Tiankai Yang"
@@ -23,23 +36,12 @@ preprints:
       - name: "Cheng Cheng"
       - name: "Xiyang Hu"
       - name: "Yue Zhao"
+    venue: "IJCNLP-AACL (Findings)"
     date: "2025"
+    features: ""
     link: "https://arxiv.org/abs/2505.12594"
     code: "https://github.com/USC-FORTIS/AD-AGENT"
-    # bib: "https://scholar.googleusercontent.com/scholar.bib?q=info:n__vaWhjgR8J:scholar.google.com/&output=citation&scisdr=ClH5Oh3aELDpyc5Bakc:AFWwaeYAAAAAZ3hHckdzR9MZc3Ut2kT5xLyvnIM&scisig=AFWwaeYAAAAAZ3hHcskkXQhiUiRxQO7EiNv6h4Q&scisf=4&ct=citation&cd=0&hl=en"
-  
-conference:
-  # - id: 0
-  #   title: ""
-  #   authors:
-  #     - name: "Tiankai Yang"
-  #       equal_contribution: true
-  #   venue: ""
-  #   date: "2024"
-  #   features: ""
-  #   link: ""
-  #   code: ""
-  #   bib: ""
+    # bib: ""
   - id: 2
     title: "AD-LLM: Benchmarking large language models for anomaly detection"
     authors:
@@ -59,7 +61,7 @@ conference:
       - name: "Yue Zhao"
     venue: "ACL (Findings)"
     date: "2025"
-    link: ""
+    link: "https://aclanthology.org/2025.findings-acl.79/"
     code: "https://github.com/USC-FORTIS/AD-LLM"
     # bib: ""
   - id: 1
