@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I’m Tiankai Yang, a first-year PhD student of Computer Science at the University of Southern California (USC), supervised by Prof. [Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/index.html). Prior, I earned a Master’s degree in Machine Learning and Data Science from USC and a Bachelor’s degree in Software Engineering from Nankai University, China. 
+Hello! I’m Tiankai Yang, a second-year PhD student of Computer Science at the University of Southern California (USC), supervised by Prof. [Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/index.html). Prior, I earned a Master’s degree in Machine Learning and Data Science from USC and a Bachelor’s degree in Software Engineering from Nankai University, China. 
 
 My research focuses on anomaly detection, diversity in generation, synthetic generation, and trust & safety in large language models and agents.
 
