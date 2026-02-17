@@ -13,10 +13,11 @@ My research focuses on anomaly detection, diversity in generation, synthetic gen
 
 News
 ======
+- **\[02/2026\]** I will join LinkedIn as an AI/ML Engineer Intern – GenAI this summer. See you in the Bay Area!
 - **\[10/2025\]** Our paper "AD-AGENT, a multi-agent LLM framework for anomaly detection" has been accepted to IJCNLP-AACL 2025 Findings! See our [Preprint](https://arxiv.org/abs/2505.12594).
-- **\[10/2025\]** We have a new paper on LLM routing; see our [Preprint](https://arxiv.org/abs/2510.07429).
-- **\[08/2025\]** We have two new papers accepted to EMNLP Findings 2025: one on causal methods for hallucination mitigation (Treble Counterfactual VLMs) and another introducing a benchmark for NLP anomaly detection (NLP-ADBench). See our [Treble Preprint](https://arxiv.org/abs/2503.06169) and [NLP-ADBench Preprint](https://arxiv.org/abs/2412.04784)!
-- **\[05/2025\]** We have a new paper on benchmarking personalized conversational reasoning for LLMs (PersonaConvBench). See our [Preprint](https://arxiv.org/abs/2505.14106)!
+<!-- - **\[10/2025\]** We have a new paper on LLM routing; see our [Preprint](https://arxiv.org/abs/2510.07429). -->
+<!-- - **\[08/2025\]** We have two new papers accepted to EMNLP Findings 2025: one on causal methods for hallucination mitigation (Treble Counterfactual VLMs) and another introducing a benchmark for NLP anomaly detection (NLP-ADBench). See our [Treble Preprint](https://arxiv.org/abs/2503.06169) and [NLP-ADBench Preprint](https://arxiv.org/abs/2412.04784)! -->
+<!-- - **\[05/2025\]** We have a new paper on benchmarking personalized conversational reasoning for LLMs (PersonaConvBench). See our [Preprint](https://arxiv.org/abs/2505.14106)! -->
 - **\[05/2025\]** Our paper "AD-LLM: Benchmarking Large Language Models for Anomaly Detection" has been accepted to ACL 2025 Findings! See our [Preprint](https://arxiv.org/abs/2412.11142).
 <!-- - **\[04/2025\]** We have a new paper on model selection via LLMs for time series forecasting; see our [Preprint](https://arxiv.org/abs/2504.02119). -->
 <!-- - **\[04/2025\]** We have a new paper on adversarial prompt optimization to manipulate LLM ranking systems (StealthRank); see our [Preprint](https://arxiv.org/abs/2504.05804). -->
