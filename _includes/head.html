@@ -24,9 +24,9 @@
 
 <link rel="canonical" href="{{ og_url }}">
 <link rel="alternate" type="application/atom+xml" href="{{ '/feed.xml' | relative_url }}">
-<link rel="icon" type="image/png" href="{{ '/images/favicon-32x32.png' | relative_url }}" sizes="32x32">
-<link rel="icon" type="image/png" href="{{ '/images/favicon-16x16.png' | relative_url }}" sizes="16x16">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon-180x180.png' | relative_url }}">
+<!-- USC favicon from the original AcademicPages template -->
+<link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
+<link rel="shortcut icon" href="{{ '/images/favicon.ico' | relative_url }}">
 <link rel="manifest" href="{{ '/images/manifest.json' | relative_url }}">
 <meta name="theme-color" content="#981B1E">
 
@@ -34,8 +34,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<!-- Stylesheet -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<!-- Stylesheet -- ?v=... busts the browser cache on every rebuild -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
 <!-- Initialize theme before paint to avoid flash -->
 <script>
