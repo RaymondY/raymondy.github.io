@@ -21,7 +21,9 @@ preprints:
   - title: "Cat-DPO: Category-Adaptive Safety Alignment"
     authors:
       - name: "Tiankai Yang"
+        equal_contribution: true
       - name: "Yi Nian"
+        equal_contribution: true
       - name: "Xinyuan Li"
       - name: "Ruiyao Xu"
       - name: "Henry Peng Zou"

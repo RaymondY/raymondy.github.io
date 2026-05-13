@@ -14,7 +14,7 @@ My research focuses on the **Trustworthiness of Large Language Models and Agents
 
 - **Post-training Alignment for Trustworthy LLMs** — Safety Alignment, Preference Learning
 - **Robust and Reliable LLM Inference** — Hallucination mitigation, Jailbreak / OOD Detection, Multimodal Robustness, Model Selection &amp; Routing
-- **Trustworthy LLM Agents and Agentic Systems** — Agent Safety, Runtime Reliability, Multi-agent Orchestration
+- **Trustworthy LLM Agents and Agentic Systems** — Agent Safety, Runtime Reliability, Multi-Agent Orchestration
 
 I will join **LinkedIn** as an AI/ML Engineer Intern (Generative AI) in May 2026 in Sunnyvale! 
 <!-- Reach me at [tiankaiy@usc.edu](mailto:tiankaiy@usc.edu) or [raymondyangtk@gmail.com](mailto:raymondyangtk@gmail.com). -->
