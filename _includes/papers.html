@@ -1,0 +1,95 @@
+{%- comment -%}
+Renders a paper list from _data/papers.yml.
+
+Args:
+  include.section : "preprints" | "conference" | "journal" (required)
+  include.title   : section heading (optional; falls back to capitalised section)
+  include.me      : author name to highlight (defaults to site.author.name)
+{%- endcomment -%}
+{%- assign section = include.section -%}
+{%- assign me = include.me | default: site.author.name -%}
+{%- assign papers = site.data.papers[section] -%}
+{%- if papers and papers.size > 0 -%}
+
+<section class="section" id="{{ section }}">
+  <h2 class="section__title">
+    {{ include.title | default: section | capitalize }}
+  </h2>
+
+  <ul class="papers">
+    {%- for paper in papers -%}
+      {%- comment -%}
+      Resolve thumbnail in priority order:
+        1. paper.image  (explicit manual override)
+        2. paper.arxiv  (build_paper_thumbs.py writes /images/papers/{arxiv}.webp)
+      {%- endcomment -%}
+      {%- assign thumb = nil -%}
+      {%- if paper.image -%}
+        {%- assign thumb = paper.image -%}
+      {%- elsif paper.arxiv -%}
+        {%- assign thumb = paper.arxiv | prepend: "/images/papers/" | append: ".webp" -%}
+      {%- endif -%}
+
+      <li class="paper">
+        {%- if thumb -%}
+          <div class="paper__thumb">
+            <img src="{{ thumb | relative_url }}" alt="{{ paper.title }}" loading="lazy">
+          </div>
+        {%- else -%}
+          <div class="paper__thumb paper__thumb--placeholder">{{ paper.venue | default: section }}</div>
+        {%- endif -%}
+
+        <div class="paper__body">
+          <h3 class="paper__title">
+            {%- if paper.link -%}
+              <a href="{{ paper.link }}">{{ paper.title }}</a>
+            {%- else -%}
+              {{ paper.title }}
+            {%- endif -%}
+          </h3>
+
+          <p class="paper__authors">
+            {%- for author in paper.authors -%}
+              {%- assign name = author.name | replace: " ", "&nbsp;" -%}
+              {%- if author.name == me -%}
+                <span class="is-me">{{ name }}</span>
+              {%- else -%}
+                {{ name }}
+              {%- endif -%}
+              {%- if author.equal_contribution %}<sup>*</sup>{% endif -%}
+              {%- if author.corresponding_author %}<sup>♠</sup>{% endif -%}
+              {%- unless forloop.last %}, {% endunless -%}
+            {%- endfor -%}
+          </p>
+
+          <p class="paper__venue">
+            {% if paper.venue %}<em>{{ paper.venue }}</em>, {% endif -%}
+            {% if paper.journal %}<em>{{ paper.journal }}</em>, {% endif -%}
+            {{ paper.date }}
+            {% if paper.features and paper.features != "" -%}
+              <span class="paper__feature">{{ paper.features | strip_html | strip }}</span>
+            {%- endif %}
+          </p>
+
+          {%- if paper.link or paper.code or paper.bib or paper.pdf -%}
+          <div class="paper__links">
+            {%- if paper.pdf -%}
+              <a class="paper__link" href="{{ paper.pdf }}">{% include icon.html name="pdf" %}<span>PDF</span></a>
+            {%- endif -%}
+            {%- if paper.link -%}
+              <a class="paper__link" href="{{ paper.link }}">{% include icon.html name="external" %}<span>Paper</span></a>
+            {%- endif -%}
+            {%- if paper.code -%}
+              <a class="paper__link" href="{{ paper.code }}">{% include icon.html name="code" %}<span>Code</span></a>
+            {%- endif -%}
+            {%- if paper.bib -%}
+              <a class="paper__link" href="{{ paper.bib }}">{% include icon.html name="bib" %}<span>BibTeX</span></a>
+            {%- endif -%}
+          </div>
+          {%- endif -%}
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>
+{%- endif -%}

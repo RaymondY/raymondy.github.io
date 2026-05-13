@@ -1,19 +1,27 @@
 ---
-layout: archive
+layout: page
 title: "Services"
 permalink: /services/
-author_profile: true
 redirect_from:
   - /services
 ---
 
-## Program Committee (PC) for Conferences and Workshops
-- [ICLR 2026](https://iclr.cc/Conferences/2026)
-- [AAAI 2026](https://aaai.org/conference/aaai/aaai-26/)
-- [ACL ARR 2025](https://2025.aclweb.org/) (Outstanding Reviewer)
-- [ICML 2025](https://icml.cc/Conferences/2025)
-- ICLR Workshop on [Foundation Models in the Wild](https://fm-wild-community.github.io/), 2025
-- ACL Workshop on [Advances in Language and Vision Research](https://alvr-workshop.github.io/), 2024
-- ICML Workshop on [Foundation Models in the Wild](https://fm-wild-community.github.io/index_2024.html), 2024
-- CVPR Workshop on Synthetic Data for Computer Vision, [2024](https://syndata4cv.github.io/cvpr2024.html), [2025](https://syndata4cv.github.io/)
-- ICLR Workshop on [Reliable and Responsible Foundation Models](https://iclr-r2fm.github.io/), 2024
+## Conference Program Committee
+- **ICLR** 2026
+- **ICML** 2025, 2026
+- **NeurIPS** 2026
+- **AAAI** 2026
+- **COLM** 2026
+- **ACL ARR** 2025 (<em>Outstanding Reviewer</em>), 2026
+
+## Workshop Reviewer
+- ACM CAIS 2026 Workshop on AgentSkills
+- ICLR 2025 Workshop on [Foundation Models in the Wild](https://fm-wild-community.github.io/)
+- CVPR 2025 Workshop on [Synthetic Data for Computer Vision](https://syndata4cv.github.io/)
+- ICML 2024 Workshop on [Foundation Models in the Wild](https://fm-wild-community.github.io/index_2024.html)
+- ACL 2024 Workshop on [Advances in Language and Vision Research](https://alvr-workshop.github.io/)
+- CVPR 2024 Workshop on [Synthetic Data for Computer Vision](https://syndata4cv.github.io/cvpr2024.html)
+- ICLR 2024 Workshop on [Reliable and Responsible Foundation Models](https://iclr-r2fm.github.io/)
+
+## Journal Reviewer
+- IEEE Transactions on Computational Social Systems

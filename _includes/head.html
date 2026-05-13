@@ -1,21 +1,65 @@
-{% include base_path %}
-
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% include seo.html %}
+{%- assign page_title = page.title | default: site.title -%}
+{%- assign full_title = site.title -%}
+{%- if page.title and page.url != "/" -%}
+  {%- assign full_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title -%}
+{%- endif -%}
+{%- assign meta_desc = page.description | default: site.description | strip_newlines | truncate: 200 -%}
+{%- assign og_image = page.og_image | default: site.og_image | default: "/images/profile.webp" -%}
+{%- assign og_url = page.url | absolute_url -%}
 
-<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ meta_desc }}">
+<meta name="author" content="{{ site.author.name }}">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="{{ full_title }}">
+<meta property="og:description" content="{{ meta_desc }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ og_url }}">
+<meta property="og:image" content="{{ og_image | absolute_url }}">
+<meta name="twitter:card" content="summary_large_image">
 
+<link rel="canonical" href="{{ og_url }}">
+<link rel="alternate" type="application/atom+xml" href="{{ '/feed.xml' | relative_url }}">
+<link rel="icon" type="image/png" href="{{ '/images/favicon-32x32.png' | relative_url }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ '/images/favicon-16x16.png' | relative_url }}" sizes="16x16">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon-180x180.png' | relative_url }}">
+<link rel="manifest" href="{{ '/images/manifest.json' | relative_url }}">
+<meta name="theme-color" content="#981B1E">
+
+<!-- Icon fonts (matches the original Academic Pages icons for scholar / linkedin / etc.) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+<!-- Initialize theme before paint to avoid flash -->
 <script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
 </script>
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
-
-<meta http-equiv="cleartype" content="on">
+<!-- JSON-LD Person schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author.name }}",
+  "url": "{{ site.url }}",
+  "image": "{{ og_image | absolute_url }}",
+  "email": "mailto:{{ site.author.email }}",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "{{ site.author.employer }}"
+  },
+  "jobTitle": "{{ site.author.role }}"
+}
+</script>

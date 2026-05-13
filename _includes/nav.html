@@ -1,0 +1,33 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.author.display_name | default: site.author.name }}</a>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav__toggle" type="button" aria-expanded="false"
+              aria-controls="nav-list" aria-label="Toggle menu" data-nav-toggle>
+        {% include icon.html name="menu" %}
+      </button>
+
+      <ul id="nav-list" class="nav__list">
+        {% for link in site.data.navigation.main %}
+          {% assign is_active = false %}
+          {% if link.url == "/" %}
+            {% if page.url == "/" %}{% assign is_active = true %}{% endif %}
+          {% elsif page.url contains link.url %}
+            {% assign is_active = true %}
+          {% endif %}
+          <li>
+            <a class="nav__link{% if is_active %} is-active{% endif %}" href="{{ link.url | relative_url }}">
+              {{ link.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <button class="nav__theme" type="button" aria-label="Toggle theme" data-theme-toggle>
+        <span class="theme-icon theme-icon--sun">{% include icon.html name="sun" %}</span>
+        <span class="theme-icon theme-icon--moon" hidden>{% include icon.html name="moon" %}</span>
+      </button>
+    </nav>
+  </div>
+</header>

@@ -1,40 +1,14 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-
+# Header navigation. Append to `main` to add a link.
 main:
-  # - title: "Home"
-  #   sec: "about-me"
-  # - title: "News"
-  #   sec: "news"
+  - title: "Home"
+    url:   "/"
   - title: "Publications"
-    url: /publications/
-
-  - title: "Research Experiences"
-    url: /research-experiences/
-
-  # - title: "Talks"
-  #   url: /talks/    
-
-  # - title: "Teaching"
-  #   url: /teaching/    
-
+    url:   "/publications/"
+  - title: "Experience"
+    url:   "/experience/"
   - title: "Services"
-    url: /services/
-
-  - title: "Educations"
-    url: /educations/
-    
-  # - title: "Portfolio"
-  #   url: /portfolio/
-        
-  # - title: "Blog Posts"
-  #   url: /year-archive/
-    
-  # - title: "CV"
-  #   url: /cv/
-    
-  # - title: "Guide"
-  #   url: /markdown/
+    url:   "/services/"
+  - title: "Education"
+    url:   "/education/"
+  - title: "CV"
+    url:   "/files/Tiankai_Yang_CV.pdf"

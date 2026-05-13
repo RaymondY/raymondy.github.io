@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="page">
+  {% include sidebar.html %}
+
+  <article class="page__main">
+    {% if page.title and page.show_title != false %}
+      <h1>{{ page.title }}</h1>
+    {% endif %}
+
+    {{ content }}
+  </article>
+</div>

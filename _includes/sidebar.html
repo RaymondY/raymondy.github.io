@@ -1,25 +1,64 @@
-{% include base_path %}
+<aside class="profile" aria-label="Author">
+  {%- assign avatar     = site.author.avatar | prepend: "/images/" -%}
+  {%- assign avatar_alt = site.author.avatar_alt | default: "/images/ryan.webp" -%}
 
-{% if page.author_profile or layout.author_profile or page.sidebar %}
-  <div class="sidebar sticky">
-  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
-  {% if page.sidebar %}
-    {% for s in page.sidebar %}
-      {% if s.image %}
-        <img src=
-        {% if s.image contains "://" %}
-          "{{ s.image }}"
-        {% else %}
-          "{{ s.image | prepend: "/images/" | prepend: base_path }}"
-        {% endif %}
-        alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
-      {% endif %}
-      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
-      {% if s.text %}{{ s.text | markdownify }}{% endif %}
-    {% endfor %}
-    {% if page.sidebar.nav %}
-      {% include nav_list nav=page.sidebar.nav %}
-    {% endif %}
-  {% endif %}
+  <div class="profile__avatar-wrap" role="button" tabindex="0"
+       aria-label="Toggle avatar" data-avatar-flip>
+    <div class="profile__avatar-card">
+      <div class="profile__avatar-face profile__avatar-face--front">
+        <img src="{{ avatar | relative_url }}"
+             alt="{{ site.author.name }}"
+             width="200" height="200" loading="eager">
+      </div>
+      <div class="profile__avatar-face profile__avatar-face--back">
+        <img src="{{ avatar_alt | relative_url }}"
+             alt="Ryan the corgi"
+             width="200" height="200" loading="lazy">
+      </div>
+    </div>
   </div>
-{% endif %}
+
+  <h2 class="profile__name">
+    <span class="profile__name-text profile__name-text--front">
+      {{ site.author.display_name | default: site.author.name }}
+    </span>
+    <span class="profile__name-text profile__name-text--back" aria-hidden="true">
+      Hi, I'm Ryan:)
+    </span>
+  </h2>
+  {%- if site.author.bio %}<p class="profile__bio">{{ site.author.bio }}</p>{%- endif %}
+
+  <ul class="profile__meta">
+    {%- if site.author.location %}
+    <li>{% include icon.html name="location" %}<span>{{ site.author.location }}</span></li>
+    {%- endif %}
+    {%- if site.author.employer %}
+    <li>{% include icon.html name="building" %}<span>{{ site.author.employer }}</span></li>
+    {%- endif %}
+    {%- if site.author.lab %}
+    <li>{% include icon.html name="lab" %}<a href="{{ site.author.lablink }}">{{ site.author.lab }}</a></li>
+    {%- endif %}
+  </ul>
+
+  {%- if site.data.social and site.data.social.size > 0 %}
+  <ul class="profile__social" aria-label="Social links">
+    {%- for link in site.data.social %}
+    <li>
+      <a href="{{ link.url }}" aria-label="{{ link.label }}" title="{{ link.label }}"
+         class="profile__social-link"
+         {% unless link.url contains 'mailto' %}target="_blank" rel="noopener"{% endunless %}>
+        {% include icon.html name=link.icon %}
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+
+  {%- if site.clustrmaps_id %}
+  <div class="profile__visitors" aria-label="Visitor map">
+    <script type="text/javascript" id="clstr_globe"
+            src="//clustrmaps.com/globe.js?d={{ site.clustrmaps_id }}"
+            async></script>
+  </div>
+  {%- endif %}
+</aside>

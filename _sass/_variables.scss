@@ -1,165 +1,83 @@
-/* ==========================================================================
-   Variables
-   ========================================================================== */
+// ============================================================================
+// Design tokens
+// All colors are exposed as CSS custom properties so the JS theme toggle
+// can swap them at runtime without recompiling SCSS.
+// ============================================================================
 
-/*
-   Typography
-   ========================================================================== */
+// Type scale
+$font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+            Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+$font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+$font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+            monospace;
 
-$doc-font-size              : 16;
+$fs-base: 16px;
+$fs-sm:   14px;
+$fs-xs:   13px;
+$fs-h1:   2.0rem;
+$fs-h2:   1.4rem;
+$fs-h3:   1.15rem;
 
-/* paragraph indention */
-$paragraph-indent           : false; // true, false (default)
-$indent-var                 : 1.3em;
+$lh-base: 1.65;
+$lh-tight: 1.35;
 
-/* system typefaces */
-$serif                      : Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-$monospace                  : Monaco, Consolas, "Lucida Console", monospace;
+// Layout
+$bp-md:        720px;
+$bp-lg:        1024px;
+$bp-xl:        1280px;
 
-/* sans serif typefaces */
-$sans-serif-narrow          : $sans-serif;
-$helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
+$sidebar-w:    260px;
+$content-max:  720px;
+$gap:          2.5rem;
+$radius:       8px;
 
-/* serif typefaces */
-$georgia                    : Georgia, serif;
-$times                      : Times, serif;
-$bodoni                     : "Bodoni MT", serif;
-$calisto                    : "Calisto MT", serif;
-$garamond                   : Garamond, serif;
+// Light theme (default).
+// Accent is USC cardinal red, derived from the CV's
+// \definecolor{uscred}{rgb}{0.597,0.105,0.117} = #981B1E.
+:root {
+  --bg:        #ffffff;
+  --surface:   #f7f8fa;
+  --text:      #18181b;
+  --muted:     #6b7280;
+  --border:    #e5e7eb;
+  --accent:    #981B1E;        // uscred
+  --accent-fg: #ffffff;
+  --link:      #981B1E;        // links share the cardinal hue
+  --link-hover:#6a1216;
+  --code-bg:   #f4f4f5;
+  --shadow:    0 1px 2px rgba(0,0,0,.04), 0 4px 12px rgba(0,0,0,.04);
+}
 
-$global-font-family         : $sans-serif;
-$header-font-family         : $sans-serif;
-$caption-font-family        : $serif;
+// Dark theme. Accent is lifted USC cardinal -- same brand hue as the light
+// mode (#981B1E) but raised in lightness so it reads cleanly on the dark
+// surface without the eye-strain of a pure saturated tone.
+:root[data-theme="dark"] {
+  --bg:        #0f1115;
+  --surface:   #161922;
+  --text:      #e8eaed;
+  --muted:     #9aa0a6;
+  --border:    #262a35;
+  --accent:    #F26178;
+  --accent-fg: #ffffff;
+  --link:      #F26178;
+  --link-hover:#F58597;
+  --code-bg:   #1c1f29;
+  --shadow:    0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+}
 
-/* type scale */
-$type-size-1                : 2.441em;  // ~39.056px
-$type-size-2                : 1.953em;  // ~31.248px
-$type-size-3                : 1.563em;  // ~25.008px
-$type-size-4                : 1.25em;   // ~20px
-$type-size-5                : 1em;      // ~16px
-$type-size-6                : 0.75em;   // ~12px
-$type-size-7                : 0.6875em; // ~11px
-$type-size-8                : 0.625em;  // ~10px
-
-/* masthead properties */
-$masthead-height            : 70px;
-
-/* Sidebar properties */
-$sidebar-screen-min-width   : 1024px;
-$sidebar-link-max-width     : 250px;
-
-
-
-/*
-   Colors
-   ========================================================================== */
-
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
-
-$body-color                 : #fff;
-$background-color           : #fff;
-$code-background-color      : #fafafa;
-$code-background-color-dark : $light-gray;
-$text-color                 : $dark-gray;
-$border-color               : $lighter-gray;
-
-$primary-color              : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
-$danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-
-/* brands */
-$behance-color              : #1769FF;
-$bluesky-color              : #1184fe;
-$dribbble-color             : #ea4c89;
-$facebook-color             : #3b5998;
-$flickr-color               : #ff0084;
-$foursquare-color           : #0072b1;
-$github-color               : #171516;
-$google-plus-color          : #dd4b39;
-$instagram-color            : #517fa4;
-$kaggle-color               : #20c0ff;
-$lastfm-color               : #d51007;
-$linkedin-color             : #007bb6;
-$mastodon-color             : #6364ff;
-$orcid-color                : #a6ce39;
-$pinterest-color            : #cb2027;
-$rss-color                  : #fa9b39;
-$soundcloud-color           : #ff3300;
-$stackoverflow-color        : #fe7a15;
-$tumblr-color               : #32506d;
-$twitter-color              : #55acee;
-$vimeo-color                : #1ab7ea;
-$vine-color                 : #00bf8f;
-$youtube-color              : #bb0000;
-$xing-color                 : #006567;
-
-
-/* links */
-$link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#fff, $link-color, 25%);
-$masthead-link-color        : $primary-color;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%);
-
-
-/*
-   Breakpoints
-   ========================================================================== */
-
-@include breakpoint-set("to ems", true);
-/*
-$small                      : 400px;
-$medium                     : 500px;
-$medium-wide                : 550px;
-$large                      : 1200px;
-$x-large                    : 1800px;
-*/
-
-$small                      : 600px !default;
-$medium                     : 768px !default;
-$medium-wide                : 900px !default;
-$large                      : 925px !default;
-$x-large                    : 1280px !default;
-
-/*
-   Grid
-   ========================================================================== */
-
-$right-sidebar-width-narrow : 200px !default;
-$right-sidebar-width        : 300px !default;
-$right-sidebar-width-wide   : 400px !default;
-
-$susy: (
-  columns: 12,
-  column-width: 120px,
-  gutters: 1/4,
-  math: fluid,
-  output: float,
-  gutter-position: after,
-  container: $large,
-  global-box-sizing: border-box,
-  // debug: (
-  //   image: show,
-  //   color: blue,
-  //   output: overlay,
-  //   toggle: top right,
-  // ),
-);
-
-
-/*
-   Other
-   ========================================================================== */
-
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$navicon-width              : 28px;
-$navicon-height             : 4px;
-$global-transition          : all 0.2s ease-in-out;
+// Follow OS preference when no explicit choice has been saved.
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:        #0f1115;
+    --surface:   #161922;
+    --text:      #e8eaed;
+    --muted:     #9aa0a6;
+    --border:    #262a35;
+    --accent:    #F26178;
+    --accent-fg: #ffffff;
+    --link:      #F26178;
+    --link-hover:#F58597;
+    --code-bg:   #1c1f29;
+    --shadow:    0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  }
+}

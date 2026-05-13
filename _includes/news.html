@@ -1,0 +1,47 @@
+{%- comment -%}
+Renders news items from _data/news.yml.
+Args: include.limit (optional int) -- show only the first N items; the rest
+collapse behind a "Show more" toggle. Items render in YAML order, newest
+first by convention.
+
+Per-item schema:
+  date  : "YYYY-MM"   -- rendered as "Mon YYYY"
+  type  : paper | preprint | internship | award | talk | (omitted)
+  body  : HTML body
+{%- endcomment -%}
+{%- assign items = site.data.news -%}
+{%- assign limit = include.limit | default: 5 -%}
+{%- assign total = items | size -%}
+
+<ul class="news" {% if total > limit %}data-collapsed="true"{% endif %}>
+  {%- for item in items -%}
+    {%- assign hide = false -%}
+    {%- if forloop.index0 >= limit %}{% assign hide = true %}{% endif -%}
+    {%- assign date_iso = item.date | append: "-01" -%}
+    <li class="news__item{% if hide %} is-hidden{% endif %}">
+      <span class="news__date">{{ date_iso | date: "%b %Y" }}</span>
+      <span class="news__body">
+        {%- if item.type -%}
+          {%- case item.type -%}
+            {%- when "paper"      -%}{%- assign type_label = "Accepted"   -%}{%- assign type_icon = "🎉" -%}
+            {%- when "preprint"   -%}{%- assign type_label = "Preprint"   -%}{%- assign type_icon = "📝" -%}
+            {%- when "internship" -%}{%- assign type_label = "Internship" -%}{%- assign type_icon = "💼" -%}
+            {%- when "award"      -%}{%- assign type_label = "Award"      -%}{%- assign type_icon = "🏆" -%}
+            {%- when "talk"       -%}{%- assign type_label = "Talk"       -%}{%- assign type_icon = "🎤" -%}
+            {%- else              -%}{%- assign type_label = item.type | capitalize -%}{%- assign type_icon = "" -%}
+          {%- endcase -%}
+          <span class="news__type">{{ type_icon }} {{ type_label }}</span>
+        {%- endif -%}
+        {{ item.body }}
+      </span>
+    </li>
+  {%- endfor -%}
+</ul>
+
+{%- if total > limit %}
+<button type="button" class="news__more" data-news-toggle
+        data-label-more="Show {{ total | minus: limit }} more"
+        data-label-less="Show less">
+  Show {{ total | minus: limit }} more
+</button>
+{%- endif %}

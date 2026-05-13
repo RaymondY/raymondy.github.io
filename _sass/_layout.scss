@@ -1,0 +1,160 @@
+// ============================================================================
+// Page-level layout: container, header, two-column grid, footer
+// ============================================================================
+
+.container {
+  max-width: $bp-xl;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+
+  @media (min-width: $bp-md) { padding: 0 2rem; }
+}
+
+// Header height -- referenced by body padding-top and mobile nav drop position.
+// Matches the original AcademicPages masthead height (70px) so feel stays consistent.
+$header-h: 70px;
+
+// Fixed top bar (does not move on scroll) -- same model as the original .masthead.
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+
+  // Match the original masthead's gentle intro fade-in on first paint.
+  // Opacity-only on purpose: a `transform` keyframe promotes the bar onto its
+  // own compositor layer in some browsers and lets rubber-band overscroll
+  // drag the fixed element with the page.
+  animation: site-header-intro 0.3s both;
+  animation-delay: 0.15s;
+}
+
+@keyframes site-header-intro {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+// Reserve space at the top of the body so the fixed header never overlaps
+// page content. Set on body rather than main because `.container { padding: 0 ... }`
+// (a shorthand) would otherwise clobber a padding-top rule on <main>.
+body { padding-top: $header-h; }
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $header-h;
+  gap: 1rem;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text);
+  letter-spacing: -0.015em;
+
+  &:hover { text-decoration: none; color: var(--accent); }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: .15rem;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: .55rem 1rem;
+    font-size: 1.05rem;         // ~17px
+    font-weight: 500;
+    color: var(--text);
+    border-radius: 6px;
+    transition: background-color .15s ease, color .15s ease;
+
+    &:hover, &:focus-visible {
+      background: var(--surface);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    &.is-active { color: var(--accent); font-weight: 650; }
+  }
+
+  &__toggle, &__theme {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover { background: var(--surface); }
+    svg { width: 20px; height: 20px; }
+  }
+
+  &__toggle { display: none; }
+  &__mobile-only { display: none; }
+
+  @media (max-width: $bp-md - 1) {
+    &__toggle { display: inline-flex; }
+    &__list {
+      display: none;
+      position: absolute;
+      top: $header-h;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      padding: .5rem 1.25rem 1rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow);
+
+      &.is-open { display: flex; }
+    }
+    &__link { padding: .85rem .5rem; font-size: 1.05rem; }
+    &__mobile-only { display: inline-flex; }
+  }
+}
+
+// Two-column page layout: sticky sidebar + content
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap;
+  padding: 2.5rem 0 4rem;
+
+  @media (min-width: $bp-lg) {
+    grid-template-columns: $sidebar-w minmax(0, 1fr);
+    gap: $gap + 1rem;
+  }
+}
+
+.page__main {
+  min-width: 0;            // prevent grid blowout
+  max-width: $content-max;
+}
+
+// Footer
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  color: var(--muted);
+  font-size: $fs-sm;
+  text-align: center;
+}

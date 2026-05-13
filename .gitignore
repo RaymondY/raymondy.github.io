@@ -1,15 +1,47 @@
-.DS_Store
-
-# Ignore the contents of the _site directory and other cache directories
+# Build output / caches
 _site/
 .sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 
-# Ignore the directory for local files during development
-local/
-
-# Ignore the Gemfile that is generated
+# Local dependencies
 Gemfile.lock
+vendor/
+.bundle/
 
-# Ingore files created by npm
-node_modules
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.bak
+
+# AI / coding-assistant scratch (never push these -- may contain prompts,
+# session transcripts, or local credentials)
+.claude/
+.cursor/
+.aider*
+.codex/
+
+# Secrets / env files
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+
+# npm (not used here, but harmless)
+node_modules/
 package-lock.json
+
+# Scratch
+local/
+tmp/
+
+# Paper-thumbnail builder cache
+scripts/.cache/

@@ -1,0 +1,26 @@
+# Social links shown in the sidebar.
+# Add an entry only for accounts you actually have. Items not listed here
+# are not rendered. Order in this file = order on the page.
+#
+# Fields:
+#   icon  : maps to an inline SVG in _includes/icon.html
+#   label : aria-label / tooltip
+#   url   : destination
+#   brand : optional. true => render the SVG in its native brand colours
+#           (no circular wrapper, no hover recolour).
+
+- icon:  email
+  label: "Email"
+  url:   "mailto:tiankaiy@usc.edu"
+
+- icon:  scholar
+  label: "Google Scholar"
+  url:   "https://scholar.google.com/citations?user=hdyKNLYAAAAJ"
+
+- icon:  github
+  label: "GitHub"
+  url:   "https://github.com/RaymondY"
+
+- icon:  linkedin
+  label: "LinkedIn"
+  url:   "https://www.linkedin.com/in/tiankai-yang"

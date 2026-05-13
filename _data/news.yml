@@ -1,0 +1,54 @@
+# News items, newest first.
+# Fields:
+#   date    : "YYYY-MM" -- rendered as "Mon YYYY" in the date pill
+#   type    : paper | preprint | internship | award | talk    (optional;
+#             controls the small pill in front of the body text)
+#   body    : HTML allowed.  Tip: the type chip already labels the kind of
+#             news -- avoid repeating words like "preprint" / "paper" in the body.
+
+- date: "2026-04"
+  type: preprint
+  body: >-
+    <em>Cat-DPO: Category-Adaptive Safety Alignment</em> is now on
+    <a href="https://arxiv.org/abs/2604.17299">arXiv</a>.
+
+- date: "2026-04"
+  type: preprint
+  body: >-
+    <em>No Attacker Needed: Unintentional Cross-User Contamination in
+    Shared-State LLM Agents</em> is now on
+    <a href="https://arxiv.org/abs/2604.01350">arXiv</a>.
+
+- date: "2026-02"
+  type: internship
+  body: >-
+    I will join <strong>LinkedIn</strong> as an AI/ML Engineer Intern,
+    Generative AI this summer. See you in Sunnyvale!
+
+- date: "2026-01"
+  type: paper
+  body: >-
+    <em>CoAct: Co-Active LLM Preference Learning with Human-AI Synergy</em>
+    accepted to <strong>ACL 2026</strong>.
+    <a href="https://arxiv.org/abs/2604.17501">arXiv</a>.
+
+- date: "2025-08"
+  type: paper
+  body: >-
+    <em>AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Detection</em>
+    accepted to <strong>IJCNLP-AACL 2025 Findings</strong>.
+    <a href="https://aclanthology.org/2025.findings-ijcnlp.11/">ACL Anthology</a>.
+
+- date: "2025-05"
+  type: paper
+  body: >-
+    <em>AD-LLM: Benchmarking Large Language Models for Anomaly Detection</em>
+    accepted to <strong>ACL 2025 Findings</strong>.
+    <a href="https://aclanthology.org/2025.findings-acl.79/">ACL Anthology</a>.
+
+- date: "2025-02"
+  type: paper
+  body: >-
+    <em>DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution
+    Detection</em> at <strong>CVPR 2025</strong> as a Highlight.
+    <a href="https://cvpr.thecvf.com/virtual/2025/poster/33698">Poster</a>.
