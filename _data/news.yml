@@ -6,6 +6,12 @@
 #   body    : HTML allowed.  Tip: the type chip already labels the kind of
 #             news -- avoid repeating words like "preprint" / "paper" in the body.
 
+- date: "2026-05"
+  type: award
+  body: >-
+    <em>CoAct: Co-Active LLM Preference Learning with Human-AI Synergy</em>
+    selected for an <strong>Oral presentation</strong> at <strong>ACL 2026</strong>.
+
 - date: "2026-04"
   type: preprint
   body: >-

@@ -93,6 +93,7 @@ conference:
       - name: "Kaize Ding"
     venue: "ACL"
     date: "2026"
+    features: "Oral"
     arxiv: "2604.17501"
     link: "https://arxiv.org/abs/2604.17501"
     code: "https://github.com/rux001/CoAct"
