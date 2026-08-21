@@ -6,11 +6,33 @@
 #   body    : HTML allowed.  Tip: the type chip already labels the kind of
 #             news -- avoid repeating words like "preprint" / "paper" in the body.
 
+- date: "2026-08"
+  type: paper
+  body: >-
+    <em>DOG-DPO: Dynamic Optimization in Geometry for Safety Alignment</em>
+    accepted to <strong>EMNLP 2026 Findings</strong>.
+    <a href="https://arxiv.org/abs/2606.07678">arXiv</a>.
+
+- date: "2026-08"
+  type: preprint
+  body: >-
+    <em>HyperSkill: Self-Evolving LLM Agents via Hypergraph-Structured Skill
+    Memory</em> is now on
+    <a href="https://arxiv.org/abs/2608.16114">arXiv</a>.
+
+# NOTE: month inferred -- adjust `date:` if the actual notification was earlier.
+- date: "2026-07"
+  type: paper
+  body: >-
+    <em>FlexRouter: Learning Complementary Model Sets for Flexible LLM
+    Routing</em> accepted to <strong>COLM 2026</strong>.
+
 - date: "2026-05"
   type: award
   body: >-
     <em>CoAct: Co-Active LLM Preference Learning with Human-AI Synergy</em>
     selected for an <strong>Oral presentation</strong> at <strong>ACL 2026</strong>.
+    <a href="https://aclanthology.org/2026.acl-long.751/">ACL Anthology</a>.
 
 - date: "2026-04"
   type: preprint
@@ -36,7 +58,7 @@
   body: >-
     <em>CoAct: Co-Active LLM Preference Learning with Human-AI Synergy</em>
     accepted to <strong>ACL 2026</strong>.
-    <a href="https://arxiv.org/abs/2604.17501">arXiv</a>.
+    <a href="https://aclanthology.org/2026.acl-long.751/">ACL Anthology</a>.
 
 - date: "2025-08"
   type: paper

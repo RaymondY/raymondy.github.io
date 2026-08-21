@@ -13,9 +13,10 @@ redirect_from:
     <div class="entry__main">
       <h3 class="entry__title">AI/ML Engineer Intern, Generative AI</h3>
       <p class="entry__org"><a href="https://www.linkedin.com/">LinkedIn</a></p>
+      <p class="entry__desc">Developed the reasoning component of an LLM-based user-simulation agent to improve user-behavior prediction, via post-training with GRPO and OPSD.</p>
     </div>
     <div class="entry__meta">
-      <span class="entry__date">May 2026 &ndash; Aug 2026 <em>(Incoming)</em></span>
+      <span class="entry__date">May 2026 &ndash; Aug 2026</span>
       <span class="entry__location">Sunnyvale, CA</span>
     </div>
   </li>

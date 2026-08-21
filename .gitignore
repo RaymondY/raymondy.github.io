@@ -48,3 +48,7 @@ MAINTAIN.md
 
 # Paper-thumbnail builder cache
 scripts/.cache/
+
+# Python bytecode (created when scripts/ modules are imported)
+__pycache__/
+*.py[cod]

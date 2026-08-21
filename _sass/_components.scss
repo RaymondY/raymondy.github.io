@@ -457,6 +457,13 @@
     color: var(--muted);
     font-size: $fs-sm;
   }
+  // Optional one-line summary of what the role involved.
+  &__desc {
+    margin: .45rem 0 0;
+    color: var(--text);
+    font-size: $fs-sm;
+    line-height: 1.5;
+  }
   &__date { display: block; }
   &__location { display: block; margin-top: .15rem; }
 
