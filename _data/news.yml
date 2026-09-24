@@ -6,6 +6,13 @@
 #   body    : HTML allowed.  Tip: the type chip already labels the kind of
 #             news -- avoid repeating words like "preprint" / "paper" in the body.
 
+- date: "2026-09"
+  type: paper
+  body: >-
+    <em>Cat-DPO: Category-Adaptive Safety Alignment</em>
+    accepted to <strong>NeurIPS 2026</strong>.
+    <a href="https://arxiv.org/abs/2604.17299">arXiv</a>.
+
 - date: "2026-08"
   type: paper
   body: >-
