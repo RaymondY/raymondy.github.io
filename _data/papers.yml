@@ -18,21 +18,6 @@
 # Selected preprints / under submission
 # ----------------------------------------------------------------------------
 preprints:
-  - title: "No Attacker Needed: Unintentional Cross-User Contamination in Shared-State LLM Agents"
-    authors:
-      - name: "Tiankai Yang"
-      - name: "Jiate Li"
-      - name: "Yi Nian"
-      - name: "Shen Dong"
-      - name: "Ruiyao Xu"
-      - name: "Ryan A. Rossi"
-      - name: "Kaize Ding"
-      - name: "Yue Zhao"
-    venue: "Under submission"
-    date: "2026"
-    arxiv: "2604.01350"
-    link: "https://arxiv.org/abs/2604.01350"
-
   # SSRN only (no arXiv) -- thumbnail built manually from the PDF (Fig. 1).
   - title: "Model Routing for Large Language Models: A Unified Taxonomy and Survey"
     authors:
@@ -79,6 +64,21 @@ preprints:
     link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7406498"
     code: "https://github.com/wwdda/Awesome-LLM-Routing"
 
+  - title: "No Attacker Needed: Unintentional Cross-User Contamination in Shared-State LLM Agents"
+    authors:
+      - name: "Tiankai Yang"
+      - name: "Jiate Li"
+      - name: "Yi Nian"
+      - name: "Shen Dong"
+      - name: "Ruiyao Xu"
+      - name: "Ryan A. Rossi"
+      - name: "Kaize Ding"
+      - name: "Yue Zhao"
+    venue: "Under submission"
+    date: "2026"
+    arxiv: "2604.01350"
+    link: "https://arxiv.org/abs/2604.01350"
+
   # Hidden for now -- uncomment to restore.
   # - title: "Learning to Route LLMs from Bandit Feedback: One Policy, Many Trade-offs"
   #   authors:
@@ -115,6 +115,35 @@ conference:
     date: "2026"
     arxiv: "2604.17299"
     link: "https://arxiv.org/abs/2604.17299"
+
+  - title: "HyperSkill: Self-Evolving LLM Agents via Hypergraph-Structured Skill Memory"
+    authors:
+      - name: "Ruiyao Xu"
+      - name: "Tiankai Yang"
+      - name: "Wei-Chieh Huang"
+    venue: "NeurIPS TTCL Workshop"
+    date: "2026"
+    arxiv: "2608.16114"
+    link: "https://arxiv.org/abs/2608.16114"
+
+  # OpenReview only (no arXiv) -- thumbnail built manually from the PDF (Fig. 1, overview).
+  - title: "SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning"
+    authors:
+      - name: "Wei Yang"
+      - name: "Li Li"
+      - name: "Yuehan Qin"
+      - name: "Yawei Wang"
+      - name: "Mingxi Wang"
+      - name: "Shixuan Li"
+      - name: "Tiankai Yang"
+      - name: "Jiate Li"
+      - name: "Jesse Thomason"
+      - name: "Xuezhe Ma"
+      - name: "Yue Zhao"
+    venue: "NeurIPS TTCL Workshop"
+    date: "2026"
+    image: "/images/papers/synco.webp"
+    link: "https://openreview.net/forum?id=0SbD6GdfQZ"
 
   - title: "CoAct: Co-Active LLM Preference Learning with Human-AI Synergy"
     authors:
@@ -179,35 +208,6 @@ conference:
     arxiv: "2504.05804"
     link: "https://arxiv.org/abs/2504.05804"
     code: "https://github.com/Tangyiming205069/controllable-seo"
-
-  - title: "HyperSkill: Self-Evolving LLM Agents via Hypergraph-Structured Skill Memory"
-    authors:
-      - name: "Ruiyao Xu"
-      - name: "Tiankai Yang"
-      - name: "Wei-Chieh Huang"
-    venue: "NeurIPS TTCL Workshop"
-    date: "2026"
-    arxiv: "2608.16114"
-    link: "https://arxiv.org/abs/2608.16114"
-
-  # OpenReview only (no arXiv) -- thumbnail built manually from the PDF (Fig. 1, overview).
-  - title: "SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning"
-    authors:
-      - name: "Wei Yang"
-      - name: "Li Li"
-      - name: "Yuehan Qin"
-      - name: "Yawei Wang"
-      - name: "Mingxi Wang"
-      - name: "Shixuan Li"
-      - name: "Tiankai Yang"
-      - name: "Jiate Li"
-      - name: "Jesse Thomason"
-      - name: "Xuezhe Ma"
-      - name: "Yue Zhao"
-    venue: "NeurIPS TTCL Workshop"
-    date: "2026"
-    image: "/images/papers/synco.webp"
-    link: "https://openreview.net/forum?id=0SbD6GdfQZ"
 
   - title: "A Personalized Conversational Benchmark: Towards Simulating Personalized Conversations"
     authors:
