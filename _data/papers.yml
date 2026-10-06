@@ -43,7 +43,7 @@ preprints:
     arxiv: "2608.16114"
     link: "https://arxiv.org/abs/2608.16114"
 
-  # SSRN only (no arXiv) -- thumbnail is a generated title card.
+  # SSRN only (no arXiv) -- thumbnail built manually from the PDF (Fig. 1).
   - title: "Model Routing for Large Language Models: A Unified Taxonomy and Survey"
     authors:
       - name: "Wang Wei"
@@ -87,6 +87,7 @@ preprints:
     date: "2026"
     image: "/images/papers/model-routing-survey.webp"
     link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7406498"
+    code: "https://github.com/wwdda/Awesome-LLM-Routing"
 
   # Hidden for now -- uncomment to restore.
   # - title: "Learning to Route LLMs from Bandit Feedback: One Policy, Many Trade-offs"
@@ -189,7 +190,7 @@ conference:
     link: "https://arxiv.org/abs/2504.05804"
     code: "https://github.com/Tangyiming205069/controllable-seo"
 
-  # OpenReview only (no arXiv) -- thumbnail is a generated title card.
+  # OpenReview only (no arXiv) -- thumbnail built manually from the PDF (Fig. 1, overview).
   - title: "SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning"
     authors:
       - name: "Wei Yang"
