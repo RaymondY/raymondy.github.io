@@ -43,6 +43,51 @@ preprints:
     arxiv: "2608.16114"
     link: "https://arxiv.org/abs/2608.16114"
 
+  # SSRN only (no arXiv) -- thumbnail is a generated title card.
+  - title: "Model Routing for Large Language Models: A Unified Taxonomy and Survey"
+    authors:
+      - name: "Wang Wei"
+      - name: "Tiankai Yang"
+      - name: "Xiangbo Gao"
+      - name: "Chan-Wei Hu"
+      - name: "Reuben Luera"
+      - name: "Runzhou Liu"
+      - name: "Nigel Fernandez"
+      - name: "Li Li"
+      - name: "Lunyiu Nie"
+      - name: "Bo Ni"
+      - name: "Junda Wu"
+      - name: "Chien Van Nguyen"
+      - name: "Deonna Owens"
+      - name: "Hongjie Chen"
+      - name: "Seunghyun Yoon"
+      - name: "Puneet Mathur"
+      - name: "Tong Yu"
+      - name: "Sungchul Kim"
+      - name: "Koustava Goswami"
+      - name: "Zichao Wang"
+      - name: "Joe Barrow"
+      - name: "Samyadeep Basu"
+      - name: "Xiang Chen"
+      - name: "Namyong Park"
+      - name: "Nesreen K. Ahmed"
+      - name: "Nedim Lipka"
+      - name: "Thien Huu Nguyen"
+      - name: "Ting-Hao Kenneth Huang"
+      - name: "Franck Dernoncourt"
+      - name: "Trung Bui"
+      - name: "Ryan A. Rossi"
+      - name: "Yue Zhao"
+      - name: "Zhengzhong Tu"
+      - name: "Hongru Du"
+      - name: "Tyler Derr"
+      - name: "Yu Wang"
+      - name: "Hoda Eldardiry"
+    venue: "SSRN preprint"
+    date: "2026"
+    image: "/images/papers/model-routing-survey.webp"
+    link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7406498"
+
   # Hidden for now -- uncomment to restore.
   # - title: "Learning to Route LLMs from Bandit Feedback: One Policy, Many Trade-offs"
   #   authors:
@@ -112,12 +157,11 @@ conference:
     arxiv: "2606.07678"
     link: "https://arxiv.org/abs/2606.07678"
 
-  # No arXiv/DOI yet -- camera-ready only; add `link:` once public.
   # Thumbnail built manually from the camera-ready PDF (Fig. 3, overview).
   - title: "FlexRouter: Learning Complementary Model Sets for Flexible LLM Routing"
     authors:
       - name: "Wang Wei"
-      - name: "Hongzheng Yang"
+      - name: "Harry Yang"
       - name: "Tiankai Yang"
       - name: "Samyadeep Basu"
       - name: "Hongjie Chen"
@@ -128,6 +172,8 @@ conference:
     venue: "COLM"
     date: "2026"
     image: "/images/papers/flexrouter.webp"
+    arxiv: "2609.38585"
+    link: "https://arxiv.org/abs/2609.38585"
 
   - title: "StealthRank: LLM Ranking Manipulation via Stealthy Prompt Optimization"
     authors:
@@ -142,6 +188,25 @@ conference:
     arxiv: "2504.05804"
     link: "https://arxiv.org/abs/2504.05804"
     code: "https://github.com/Tangyiming205069/controllable-seo"
+
+  # OpenReview only (no arXiv) -- thumbnail is a generated title card.
+  - title: "SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning"
+    authors:
+      - name: "Wei Yang"
+      - name: "Li Li"
+      - name: "Yuehan Qin"
+      - name: "Yawei Wang"
+      - name: "Mingxi Wang"
+      - name: "Shixuan Li"
+      - name: "Tiankai Yang"
+      - name: "Jiate Li"
+      - name: "Jesse Thomason"
+      - name: "Xuezhe Ma"
+      - name: "Yue Zhao"
+    venue: "NeurIPS TTCL Workshop"
+    date: "2026"
+    image: "/images/papers/synco.webp"
+    link: "https://openreview.net/forum?id=0SbD6GdfQZ"
 
   - title: "A Personalized Conversational Benchmark: Towards Simulating Personalized Conversations"
     authors:
