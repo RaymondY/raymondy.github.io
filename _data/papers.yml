@@ -33,16 +33,6 @@ preprints:
     arxiv: "2604.01350"
     link: "https://arxiv.org/abs/2604.01350"
 
-  - title: "HyperSkill: Self-Evolving LLM Agents via Hypergraph-Structured Skill Memory"
-    authors:
-      - name: "Ruiyao Xu"
-      - name: "Tiankai Yang"
-      - name: "Wei-Chieh Huang"
-    venue: "Under submission"
-    date: "2026"
-    arxiv: "2608.16114"
-    link: "https://arxiv.org/abs/2608.16114"
-
   # SSRN only (no arXiv) -- thumbnail built manually from the PDF (Fig. 1).
   - title: "Model Routing for Large Language Models: A Unified Taxonomy and Survey"
     authors:
@@ -189,6 +179,16 @@ conference:
     arxiv: "2504.05804"
     link: "https://arxiv.org/abs/2504.05804"
     code: "https://github.com/Tangyiming205069/controllable-seo"
+
+  - title: "HyperSkill: Self-Evolving LLM Agents via Hypergraph-Structured Skill Memory"
+    authors:
+      - name: "Ruiyao Xu"
+      - name: "Tiankai Yang"
+      - name: "Wei-Chieh Huang"
+    venue: "NeurIPS TTCL Workshop"
+    date: "2026"
+    arxiv: "2608.16114"
+    link: "https://arxiv.org/abs/2608.16114"
 
   # OpenReview only (no arXiv) -- thumbnail built manually from the PDF (Fig. 1, overview).
   - title: "SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning"

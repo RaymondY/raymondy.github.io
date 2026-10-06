@@ -9,9 +9,31 @@
 - date: "2026-09"
   type: paper
   body: >-
+    <em>HyperSkill: Self-Evolving LLM Agents via Hypergraph-Structured Skill
+    Memory</em> accepted to the <strong>NeurIPS 2026 TTCL Workshop</strong>.
+    <a href="https://arxiv.org/abs/2608.16114">arXiv</a>.
+
+- date: "2026-09"
+  type: paper
+  body: >-
+    <em>SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via
+    Multi-Agent Reinforcement Learning</em> accepted to the
+    <strong>NeurIPS 2026 TTCL Workshop</strong>.
+    <a href="https://openreview.net/forum?id=0SbD6GdfQZ">OpenReview</a>.
+
+- date: "2026-09"
+  type: paper
+  body: >-
     <em>Cat-DPO: Category-Adaptive Safety Alignment</em>
     accepted to <strong>NeurIPS 2026</strong>.
     <a href="https://arxiv.org/abs/2604.17299">arXiv</a>.
+
+- date: "2026-09"
+  type: preprint
+  body: >-
+    <em>Model Routing for Large Language Models: A Unified Taxonomy and
+    Survey</em> is now on
+    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7406498">SSRN</a>.
 
 - date: "2026-08"
   type: paper
