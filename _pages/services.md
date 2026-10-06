@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 ## Conference Program Committee
-- **ICLR** 2026
+- **ICLR** 2026, 2027
 - **ICML** 2025, 2026
 - **NeurIPS** 2026
 - **AAAI** 2026
